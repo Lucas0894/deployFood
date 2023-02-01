@@ -1,0 +1,35 @@
+
+.centralLanding{
+    text-align: center;
+    background-image: url('https://s1.1zoom.me/big7/270/Butterbrot_Eggs_Breakfast_Basil_575224_1920x1080.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.tituloPrincipal{
+    margin: 30px;
+    padding: 40px;
+    color: white;
+    font-size: 100px;
+    text-shadow: 0 0 20px #000;
+}
+
+.buttonGetIn{
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 0 0 20px #000;;
+    background-color: rgb(152, 50, 13);
+    width: 10%;
+    color: antiquewhite;
+    border: none;
+    font-size: 20px;
+    box-shadow: 0 0 20px #000;
+}
+
+.buttonGetIn:hover{
+    background: rgb(192, 84, 37);
+    cursor: pointer;
+}

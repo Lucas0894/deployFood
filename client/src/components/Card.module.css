@@ -1,0 +1,29 @@
+
+
+.contenedor{
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 10px #000;
+    transition: 0.7s;
+    width: 400px;
+    height: 400px;
+    
+    
+}
+
+.contenedor:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgb(226, 225, 228);
+}
+
+.letras{
+    color: white
+}
+
+.image{
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+}

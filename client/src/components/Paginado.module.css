@@ -1,0 +1,54 @@
+
+
+.list{
+    display: inline-block;
+    padding: 50px;
+    margin: 20px;
+    text-decoration: none;
+
+}
+
+.lis{
+    display: inline-block;
+}
+
+
+
+.ac{
+    display: block;
+    padding: 10px 20px;
+    color:#fff;
+    background: rgb(152, 50, 13);
+    text-decoration: none;
+}
+
+.ac:hover{
+    background: rgb(192, 84, 37);
+    cursor: pointer;
+}
+
+.activo{
+    background: rgb(192, 84, 37);
+    display: block;
+    padding: 10px 20px;
+    color:#fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+.buttonClick{
+    display: inline-block;
+    padding: 10px 20px;
+    color:#fff;
+    background: rgb(152, 50, 13);
+    text-decoration: none;
+    border: none;
+}
+
+.buttonClick:hover{
+    background: rgb(192, 84, 37);
+    cursor: pointer;
+}
+

@@ -1,0 +1,99 @@
+.gen{
+  background-image: url("https://images7.alphacoders.com/883/883562.jpg");
+  text-align: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100%;
+}
+
+.card{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.linkestilos{
+    text-decoration: none;
+}
+
+.back{
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 0 0 20px #000;
+    background-color: rgb(152, 50, 13);
+    width: 10%;
+    color: antiquewhite;
+    border: none;
+    font-size: 20px;
+}
+
+.back:hover{
+    background: rgb(192, 84, 37);
+    cursor: pointer;
+
+}
+
+.navBar{
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(152, 50, 13);
+  position: fixed;
+  top: 0%;
+  width: 100%;
+}
+
+.selector{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  background-color: rgb(152, 50, 13);
+  border: none;
+  cursor: pointer;
+}
+
+.selector:hover{
+    background: rgb(192, 84, 37);
+    cursor: pointer;
+}
+
+.options{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.options:hover{
+    background: rgb(192, 84, 37);
+    cursor: pointer;
+}
+
+.buttonBar{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  background-color: rgb(152, 50, 13);
+  border: none;
+  cursor: pointer;
+}
+
+.buttonBar:hover{
+    background: rgb(192, 84, 37);
+    cursor: pointer;
+}
+
+.giff{
+  margin-top: 0%;
+  width: 40%;
+  height: 30%;
+}
