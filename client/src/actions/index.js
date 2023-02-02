@@ -32,7 +32,7 @@ export function getAllDiets(){
 export function postRecipe(body){
     return async function(dispatch){
         try {
-            const getinfo = await axios.post('http://localhost:3001/recipes', body)
+            const getinfo = await axios.post('https://deployfood-production.up.railway.app/recipes', body)
             console.log(getinfo)
             return getinfo
         } catch (error) {
@@ -68,7 +68,7 @@ export function orderByName(payload){
 export function getNameRecipe(payload){
     return async function(dispatch){
         try {
-            const respName = await axios.get(`http://localhost:3001/recipes?title=${payload}`);
+            const respName = await axios.get(`https://deployfood-production.up.railway.app/recipes?title=${payload}`);
             return dispatch({
                 type: 'GET_NAME',
                 payload: respName.data
@@ -91,7 +91,7 @@ export function orderByHealthScore(payload){
 export function getDetail(id){
     return async function(dispatch){
         try {
-            var json = await axios.get('http://localhost:3001/recipes/'+ id)
+            var json = await axios.get('https://deployfood-production.up.railway.app/recipes/'+ id)
             return dispatch({
                 type: 'GET_DETAIL',
                 payload: json.data
