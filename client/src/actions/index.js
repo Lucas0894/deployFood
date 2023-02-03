@@ -18,7 +18,7 @@ export function getRecipes(){
 export function getAllDiets(){
     return async function(dispatch){
         try {
-            const respDiets = await axios.get('https://deployfood-production.up.railway.app/diets');
+            const respDiets = await axios.get('https://deployfood-production.up.railway.app//diets');
             return dispatch({
                 type: 'GET_ALL_DIETS',
                 payload: respDiets.data
