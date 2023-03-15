@@ -178,7 +178,7 @@ export default function FoodCreated(){
                     <br/>
                     {
                         (errors == 1) && (
-                            <label className={estilosCreated.errores}>El Titulo solo puede ser letras</label>
+                            <label className={estilosCreated.errores}>The title must only contain letters</label>
                         )
                     }
                 </div>
@@ -193,7 +193,7 @@ export default function FoodCreated(){
                     <br/>
                     {
                         (errors ==2) && (
-                            <label className={estilosCreated.errores} >La imagen debe ser una direccion de enlace jpg</label>
+                            <label className={estilosCreated.errores} >The image must be a jpg link address</label>
                         )
                     }
                 </div>
@@ -208,7 +208,7 @@ export default function FoodCreated(){
                     <br/>
                     {
                         (errors == 5) && (
-                            <label className={estilosCreated.errores}>Debe ingresar un numero del 1 al 100</label>
+                            <label className={estilosCreated.errores}>You must enter a number from 1 to 100</label>
                         )
                     }
                 </div>
@@ -225,7 +225,7 @@ export default function FoodCreated(){
                     <br/>
                     {
                         (errors == 6) && (
-                            <label className={estilosCreated.errores}>Debe ingresar alguna dieta</label>
+                            <label className={estilosCreated.errores}>You must enter a diet</label>
                         )
                     }
                     {input.diet.map((el) => 
@@ -247,7 +247,7 @@ export default function FoodCreated(){
                     <br/>
                     {
                         (errors == 3) && (
-                            <label className={estilosCreated.errores}>Debe ingresar correctamente el campo summary</label>
+                            <label className={estilosCreated.errores}>You must enter the summary field correctly</label>
                         )
                     }
                 </div>
@@ -263,7 +263,7 @@ export default function FoodCreated(){
                     <br/>
                     {
                         (errors == 4) && (
-                            <label className={estilosCreated.errores}>Debe ingresar los pasos a seguir de la receta</label>
+                            <label className={estilosCreated.errores}>You must enter the steps to follow the recipe</label>
                         )
                     }
                 </div>
@@ -273,7 +273,7 @@ export default function FoodCreated(){
             <Link to='/home'>
             <button className={estilosCreated.buttonSend}>Back</button>
             </Link>
-            {input.title == "" || input.image == "" || input.analyzedInstructions == "" || input.summary == "" || input.healthScore < 1 || input.healthScore > 100 || input.diet.length == 0? <label className={estilosCreated.errores}>Tiene que completar todos los campos correctamente</label> :<button className={estilosCreated.buttonSend} disabled={errors > 0} type="submit">Send Recipe</button>}
+            {input.title == "" || input.image == "" || input.analyzedInstructions == "" || input.summary == "" || input.healthScore < 1 || input.healthScore > 100 || input.diet.length == 0? <label className={estilosCreated.errores}>Complete all fields to continue</label> :<button className={estilosCreated.buttonSend} disabled={errors > 0} type="submit">Send Recipe</button>}
             </form>
         </div>
     )

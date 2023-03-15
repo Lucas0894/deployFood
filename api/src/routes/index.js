@@ -9,7 +9,7 @@ const {API_KEY} = process.env;
 const router = Router();
 
 // Configurar los routers
-// Ejemplo: router.use('/auth', authRouter);
+// Ejemplo: router.use('/auth', authRouter);.
 
 
 const getApiInfo = async () => {
