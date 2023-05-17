@@ -14,9 +14,7 @@ const router = Router();
 
 const getApiInfo = async () => {
     //creamos una constante que va a ser async await ya que como no sabemos el tiempo que va demorar el buscar los datos a la api lo aplicamos para que hasta que no termine de realizar la busqueda que le hemos pedido no continue,
-    const urlApi = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&addRecipeInformation=true&number=100`)
-        //luego aplico un Promise.all ya que la api me trae de a 10 recetas de las 100 que necesito, entonces aplico este metodo y me traigo las 100..
-    ;
+    const urlApi = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}&addRecipeInformation=true&number=100`);
    
     const apiInfo = urlApi.data.results.map(el => {
             return {
