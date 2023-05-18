@@ -118,10 +118,13 @@
     }
 
     .title{
-        font-size: 100%;
+        font-size: 40px;
     }
     .transparente{
-        margin: 30% 5%;
+        margin: 30% 3%;
+        
+        
+
     }
     .inputsss, .inputDiet{
         width: 70%;
