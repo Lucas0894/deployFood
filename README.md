@@ -1,43 +1,32 @@
-Food App
+
+🍴 Food App
 
 Aplicación web de recetas desarrollada con React, Redux, Node.js, Express, Sequelize y PostgreSQL.
 
-Food App permite explorar una amplia variedad de recetas, buscar platos por nombre, filtrar y ordenar resultados, consultar información detallada y crear recetas personalizadas.
+Food App permite explorar recetas, buscar platos por nombre, aplicar filtros y ordenamientos, consultar información detallada y crear recetas personalizadas.
 
-La aplicación combina información obtenida desde una API externa con recetas creadas y almacenadas en una base de datos propia.
+La aplicación combina recetas obtenidas desde una API externa con recetas almacenadas en una base de datos propia.
 
 ✨ Funcionalidades
 🏠 Inicio
 Landing page de presentación.
-Acceso directo al listado principal de recetas.
-Interfaz orientada a la exploración de diferentes platos.
+Acceso al listado principal de recetas.
 🔎 Búsqueda
 Búsqueda de recetas por nombre.
-Resultados obtenidos desde una API externa.
-Integración de recetas externas con recetas propias.
-Mensaje informativo cuando no existen resultados.
-🍽️ Exploración de recetas
+Integración con Spoonacular API.
+Visualización de recetas provenientes de la API y de la base de datos.
+Manejo de búsquedas sin resultados.
+🥗 Filtros
 
-El listado principal permite visualizar diferentes recetas mostrando:
+Filtrado de recetas según diferentes tipos de dieta:
 
-Imagen.
-Nombre.
-Tipos de dieta.
-Información general del plato.
-
-Las recetas pueden provenir tanto de la API externa como de la base de datos de la aplicación.
-
-🥗 Filtros por dieta
-
-Los usuarios pueden filtrar las recetas según sus características alimenticias:
-
-Vegetariana.
-Vegana.
-Sin gluten.
-Otros tipos de dieta disponibles.
+Vegetariana
+Vegana
+Sin gluten
+Otros tipos de dieta disponibles
 ↕️ Ordenamiento
 
-La aplicación permite organizar las recetas según diferentes criterios:
+Las recetas pueden ordenarse según:
 
 Nombre de A-Z.
 Nombre de Z-A.
@@ -45,109 +34,85 @@ Health Score de menor a mayor.
 Health Score de mayor a menor.
 📄 Paginación
 
-El listado de recetas cuenta con paginación para facilitar la navegación y mejorar la experiencia de usuario al trabajar con una gran cantidad de resultados.
+Sistema de paginación para organizar los resultados y facilitar la navegación entre las diferentes recetas.
 
 📖 Detalle de receta
 
-Cada receta cuenta con una página de detalle donde se puede consultar:
+Cada receta cuenta con una vista detallada que incluye:
 
-Imagen del plato.
-Nombre.
-Tipo de plato.
-Tipos de dieta.
-Descripción y resumen.
-Health Score.
-Instrucciones de preparación paso a paso.
-➕ Crear receta
+Imagen
+Nombre
+Tipo de plato
+Tipos de dieta
+Resumen
+Health Score
+Instrucciones paso a paso
+➕ Crear recetas
 
-Food App permite crear recetas personalizadas mediante un formulario interactivo.
+Los usuarios pueden crear sus propias recetas mediante un formulario controlado.
 
-El formulario incluye:
+El formulario permite ingresar:
 
-Nombre de la receta.
-Resumen del plato.
-Health Score.
-Instrucciones de preparación.
-Selección de uno o varios tipos de dieta.
+Nombre
+Resumen
+Health Score
+Instrucciones
+Uno o varios tipos de dieta
 
-Los datos son validados antes de ser enviados al backend y las recetas creadas quedan almacenadas en la base de datos.
+Los datos son validados antes de ser enviados al backend y las recetas creadas quedan almacenadas en PostgreSQL.
 
-🗃️ Gestión de recetas
+🌐 API
 
-Las recetas propias se almacenan en PostgreSQL y se integran con las recetas obtenidas desde la API, permitiendo que ambas fuentes se visualicen dentro de la misma aplicación.
+La aplicación utiliza Spoonacular API para obtener información sobre diferentes recetas.
 
-🌐 Integración con API
+Los datos obtenidos son procesados dentro de la aplicación para implementar:
 
-La aplicación utiliza Spoonacular API para obtener información sobre diferentes recetas y platos.
-
-Los datos obtenidos son procesados por la aplicación para permitir:
-
-Búsqueda.
-Filtrado.
-Ordenamiento.
-Paginación.
-Visualización de detalles.
-
-La lógica de filtrado y ordenamiento se gestiona dentro de la propia aplicación para tener un mayor control sobre la experiencia de usuario.
-
+Búsqueda
+Filtrado
+Ordenamiento
+Paginación
+Visualización de detalles
 🗄️ Base de datos
 
-La persistencia de datos se realiza utilizando PostgreSQL y Sequelize.
+La aplicación utiliza PostgreSQL como sistema de almacenamiento y Sequelize como ORM.
 
 Recipe
-
-Cada receta almacena información como:
-
-ID.
-Nombre.
-Resumen.
-Health Score.
-Instrucciones.
+ID
+Nombre
+Resumen
+Health Score
+Instrucciones
 Diet
+ID
+Nombre
 
-Cada tipo de dieta contiene:
+Las recetas y dietas mantienen una relación muchos a muchos, permitiendo que una receta pueda pertenecer a diferentes tipos de dieta.
 
-ID.
-Nombre.
-
-Las recetas y dietas tienen una relación muchos a muchos, permitiendo asociar múltiples dietas a una misma receta.
-
-Por ejemplo, una receta puede ser simultáneamente:
+Por ejemplo:
 
 Vegetariana + Vegana + Sin gluten
 
 🔌 Backend
 
-El backend fue desarrollado con Node.js y Express, implementando una API REST para gestionar las recetas y los tipos de dieta.
+El backend fue desarrollado con Node.js y Express mediante una API REST.
 
-Principales endpoints
-GET /recipes
-
-Obtiene las recetas disponibles y permite realizar búsquedas por nombre.
-
-GET /recipes/:id
-
-Obtiene la información detallada de una receta junto con sus tipos de dieta.
-
-POST /recipes
-
-Crea una nueva receta y establece las relaciones correspondientes con los tipos de dieta.
-
-GET /diets
-
-Obtiene los tipos de dieta disponibles en la aplicación.
-
+Endpoints principales
+Método	Endpoint	Descripción
+GET	/recipes	Obtiene las recetas y permite realizar búsquedas
+GET	/recipes/:id	Obtiene el detalle de una receta
+POST	/recipes	Crea una nueva receta
+GET	/diets	Obtiene los tipos de dieta disponibles
 ⚛️ Frontend
 
-El frontend está desarrollado con React y utiliza Redux para administrar el estado global de la aplicación.
+El frontend está desarrollado con React y Redux.
 
-La navegación se organiza mediante diferentes vistas:
+La aplicación cuenta con diferentes vistas:
 
-Home.
-Detalle de receta.
-Creación de receta.
+Home
+Detalle de receta
+Creación de receta
 
-La interfaz fue desarrollada buscando una experiencia simple e intuitiva para descubrir, consultar y crear recetas.
+Redux se utiliza para gestionar el estado global y facilitar el manejo de las recetas y filtros.
 
 🛠️ Tecnologías
 Frontend
@@ -161,42 +126,38 @@ Node.js
 Express
 Sequelize
 PostgreSQL
-APIs y herramientas
+API
 Spoonacular API
+Herramientas
 Git
 GitHub
 Postman
 Testing
-Testing de componentes del frontend.
-Testing de rutas del backend.
-Testing de modelos de base de datos.
-📂 Estructura del proyecto
+Testing de componentes del frontend
+Testing de rutas del backend
+Testing de modelos de base de datos
+📂 Estructura
 Food-App/
-│
 ├── client/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── views/
-│   │   ├── redux/
-│   │   └── ...
-│   │
-│   └── ...
+│   └── src/
+│       ├── components/
+│       ├── views/
+│       ├── redux/
+│       └── ...
 │
 ├── api/
-│   ├── src/
-│   │   ├── routes/
-│   │   ├── controllers/
-│   │   ├── models/
-│   │   └── ...
-│   │
-│   └── ...
+│   └── src/
+│       ├── routes/
+│       ├── controllers/
+│       ├── models/
+│       └── ...
 │
 └── README.md
 ⚙️ Instalación
-Clonar el repositorio
+1. Clonar el repositorio
 git clone <URL_DEL_REPOSITORIO>
 cd Food-App
-Instalar dependencias
+2. Instalar dependencias
 
 Backend:
 
@@ -207,7 +168,7 @@ Frontend:
 
 cd client
 npm install
-Configurar variables de entorno
+3. Configurar variables de entorno
 
 Crear un archivo .env dentro de api:
 
@@ -216,9 +177,8 @@ DB_PASSWORD=passwordDePostgres
 DB_HOST=localhost
 DB_NAME=food
 DB_PORT=5432
-
 SPOONACULAR_API_KEY=tu_api_key
-Ejecutar el proyecto
+4. Ejecutar el proyecto
 
 Backend:
 
@@ -231,8 +191,8 @@ cd client
 npm start
 🎯 Sobre el proyecto
 
-Food App es una aplicación Full Stack que integra frontend, backend y base de datos en una misma solución.
+Food App es un proyecto Full Stack que integra frontend, backend, base de datos y una API externa.
 
-El proyecto demuestra el uso de React y Redux para construir una interfaz dinámica, Node.js y Express para desarrollar una API REST, PostgreSQL y Sequelize para la persistencia y relaciones de datos, además del consumo y procesamiento de información proveniente de una API externa.
+El proyecto permite trabajar con React y Redux en el frontend, desarrollar una API REST con Node.js y Express, gestionar relaciones entre entidades mediante Sequelize y PostgreSQL, y consumir y procesar información proveniente de Spoonacular.
 
-Entre sus principales características se encuentran la búsqueda y exploración de recetas, filtrado por dietas, ordenamiento, paginación, visualización de detalles y creación de recetas personalizadas.
+Entre sus principales funcionalidades se encuentran la búsqueda de recetas, filtrado por dietas, ordenamiento, paginación, consulta de detalles y creación de recetas personalizadas.
